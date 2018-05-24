@@ -10,9 +10,16 @@ var server = app.listen(4000, function(){
 //Static files
 app.use(express.static('public'));
 
-//Socket setup
+// Socket setup & pass server
 var io = socket(server);
+io.on('connection', (socket) => {
 
-io.on('connection', function(socket){
-    console.log('made socket connection');
-})
+    console.log('made socket connection', socket.id);
+
+    // Handle chat event
+    socket.on('chat', function(data){
+        // console.log(data);
+        io.sockets.emit('chat', data);
+    });
+
+});
