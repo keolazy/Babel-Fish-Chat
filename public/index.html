@@ -7,6 +7,16 @@
     <link href="/styles.css" rel="stylesheet" />
   </head>
   <body>
+    <div>
+        <h2>Select language:</h2>
+        <div id="languagePicker">
+          <select id="language" name="cars">
+              <option value="English">English</option>
+              <option value="Japanese">Japanese</option>
+              <option value="Afrikaans">Afrikaans</option>
+          </select>
+        </div>
+    </div>
     <div id="babel-chat">
         <div id="chat-window">
             <div id="output">
@@ -16,11 +26,6 @@
     </div>
     <input id="handle" type="text" placeholder="Handle" />
     <input id="message" type="text" placeholder="Message" />
-    <select id ="language" name="cars">
-        <option value="English">English</option>
-        <option value="Japanese">Japanese</option>
-        <option value="Afrikaans">Afrikaans</option>
-      </select>
     <button id="send">Send</button>
     <script src="/chat.js"></script>
   </body>

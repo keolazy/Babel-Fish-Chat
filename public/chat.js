@@ -20,5 +20,7 @@ btn.addEventListener('click', function(){
 
 // Listen for events
 socket.on('chat', function(data){
+    //google translate message
+
     output.innerHTML += '<p><strong>' + data.handle + ': </strong>' + data.message + " " + data.language + '</p>';
 });
